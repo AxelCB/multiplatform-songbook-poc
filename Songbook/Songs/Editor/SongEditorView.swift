@@ -1,21 +1,14 @@
-//
-//  SongEditorView.swift
-//  Songbook
-//
-//  Created by Axel Collard Bovy on 9/10/22.
-//
-
 import SwiftUI
 
 struct SongEditorView: View {
-    @State private var lyrics = ""
+    @State private(set) var song: EditableSong
 
     var body: some View {
-        TextEditor(text: $lyrics)
+        TextEditor(text: $song.lyrics)
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button("Save") {
-                    print("Saving lyrics")
+                    print("Saving song...")
                 }
             }
         }
@@ -24,6 +17,6 @@ struct SongEditorView: View {
 
 struct SongEditorView_Previews: PreviewProvider {
     static var previews: some View {
-        SongEditorView()
+        SongEditorView(song: EditableSong(lyrics: ""))
     }
 }

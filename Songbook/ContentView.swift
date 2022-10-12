@@ -1,15 +1,8 @@
-//
-//  ContentView.swift
-//  Songbook
-//
-//  Created by Axel Collard Bovy on 8/10/22.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        SongEditorView()
+        Text("Hello World")
     }
 }
 
