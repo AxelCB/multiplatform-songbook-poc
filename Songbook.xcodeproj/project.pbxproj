@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		B34D1ABF28F7202B00FCE1B1 /* SongEditorViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D1ABE28F7202B00FCE1B1 /* SongEditorViewState.swift */; };
 		B34D1AC128F7206900FCE1B1 /* SongEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D1AC028F7206900FCE1B1 /* SongEditorViewModel.swift */; };
+		B34D1AC428F75B8300FCE1B1 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D1AC328F75B8300FCE1B1 /* LocalFileManager.swift */; };
+		B34D1AC728F75DB100FCE1B1 /* SongRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D1AC628F75DB100FCE1B1 /* SongRepository.swift */; };
 		B36A32C428F334B200C63738 /* SongEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A32C328F334B200C63738 /* SongEditorView.swift */; };
+		B3DE65DA28F883E7007B5673 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DE65D928F883E7007B5673 /* Song.swift */; };
 		B3ECE04A28F0DC2500AF3A80 /* SongbookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ECE04928F0DC2500AF3A80 /* SongbookApp.swift */; };
 		B3ECE04C28F0DC2500AF3A80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ECE04B28F0DC2500AF3A80 /* ContentView.swift */; };
 		B3ECE04E28F0DC2600AF3A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3ECE04D28F0DC2600AF3A80 /* Assets.xcassets */; };
@@ -19,7 +22,10 @@
 /* Begin PBXFileReference section */
 		B34D1ABE28F7202B00FCE1B1 /* SongEditorViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongEditorViewState.swift; sourceTree = "<group>"; };
 		B34D1AC028F7206900FCE1B1 /* SongEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongEditorViewModel.swift; sourceTree = "<group>"; };
+		B34D1AC328F75B8300FCE1B1 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		B34D1AC628F75DB100FCE1B1 /* SongRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRepository.swift; sourceTree = "<group>"; };
 		B36A32C328F334B200C63738 /* SongEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongEditorView.swift; sourceTree = "<group>"; };
+		B3DE65D928F883E7007B5673 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		B3ECE04628F0DC2500AF3A80 /* Songbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Songbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3ECE04928F0DC2500AF3A80 /* SongbookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongbookApp.swift; sourceTree = "<group>"; };
 		B3ECE04B28F0DC2500AF3A80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,7 +48,9 @@
 		B34D1ABC28F71F5C00FCE1B1 /* Songs */ = {
 			isa = PBXGroup;
 			children = (
+				B34D1AC528F75DA500FCE1B1 /* Repository */,
 				B34D1ABD28F7201400FCE1B1 /* Editor */,
+				B3DE65D928F883E7007B5673 /* Song.swift */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -55,6 +63,22 @@
 				B34D1AC028F7206900FCE1B1 /* SongEditorViewModel.swift */,
 			);
 			path = Editor;
+			sourceTree = "<group>";
+		};
+		B34D1AC228F75B7000FCE1B1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B34D1AC328F75B8300FCE1B1 /* LocalFileManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B34D1AC528F75DA500FCE1B1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B34D1AC628F75DB100FCE1B1 /* SongRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		B3ECE03D28F0DC2500AF3A80 = {
@@ -76,6 +100,7 @@
 		B3ECE04828F0DC2500AF3A80 /* Songbook */ = {
 			isa = PBXGroup;
 			children = (
+				B34D1AC228F75B7000FCE1B1 /* Utils */,
 				B34D1ABC28F71F5C00FCE1B1 /* Songs */,
 				B3ECE04928F0DC2500AF3A80 /* SongbookApp.swift */,
 				B3ECE04B28F0DC2500AF3A80 /* ContentView.swift */,
@@ -168,7 +193,10 @@
 				B3ECE04C28F0DC2500AF3A80 /* ContentView.swift in Sources */,
 				B34D1ABF28F7202B00FCE1B1 /* SongEditorViewState.swift in Sources */,
 				B34D1AC128F7206900FCE1B1 /* SongEditorViewModel.swift in Sources */,
+				B3DE65DA28F883E7007B5673 /* Song.swift in Sources */,
 				B3ECE04A28F0DC2500AF3A80 /* SongbookApp.swift in Sources */,
+				B34D1AC428F75B8300FCE1B1 /* LocalFileManager.swift in Sources */,
+				B34D1AC728F75DB100FCE1B1 /* SongRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
